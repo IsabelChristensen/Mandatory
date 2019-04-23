@@ -11,6 +11,8 @@ import UpdateRecipe from "./UpdateQuestion";
 
 class App extends Component {
 
+    API_URL = process.env.REACT_APP_API_URL;
+
     constructor(props) {
         super(props);
 
@@ -32,7 +34,7 @@ class App extends Component {
 
     getData() {
 
-        fetch('http://localhost:8080/question')
+        fetch(`${this.API_URL}/question`)
             .then(response => response.json())
             .then(questions => this.setState({ questions}))
     }
@@ -48,7 +50,7 @@ class App extends Component {
 
         console.log(title + description + author );
 
-        fetch('http://localhost:8080/question', {
+        fetch(`${this.API_URL}/question`, {
 
             method: 'POST',
             body: JSON.stringify(newQuestion),
@@ -82,7 +84,9 @@ class App extends Component {
 
         };
 
-        fetch(`http://localhost:8080/question/update/${id}`, {
+
+
+        fetch(`${this.API_URL}/question/update/${id}`, {
 
             method: 'PUT',
             body: JSON.stringify(newQuestion),
@@ -113,10 +117,7 @@ class App extends Component {
 
     votePlusForQuestion(id) {
 
-
-        fetch(`http://localhost:8080/question/update/plus/comment/${id}`, {
-
-
+        fetch(`${this.API_URL}/question/update/plus/comment/${id}`, {
 
             method: 'PUT',
             //body: JSON.stringify(id),
@@ -137,7 +138,7 @@ class App extends Component {
     voteMinusForQuestion(id) {
 
 
-        fetch(`http://localhost:8080/question/update/minus/comment/${id}`, {
+        fetch(`${this.API_URL}/question/update/minus/comment/${id}`, {
             //'/question/update/comment/:id/',
 
 
@@ -164,7 +165,7 @@ class App extends Component {
         };
 
 
-        fetch(`http://localhost:8080/question/create/comment/${id}`, {
+        fetch(`${this.API_URL}/question/create/comment/${id}`, {
 
             method: 'POST',
             body: JSON.stringify(newComment),
