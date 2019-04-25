@@ -16,7 +16,7 @@ class Question extends Component {
         this.onChange = this.onChange.bind(this);
         this.handleSubmitComment = this.handleSubmitComment.bind(this);
 
-        fetch('http://localhost:8080/question/'+ props.match.params.id)
+        fetch('http://localhost:8081/api/question/'+ props.match.params.id)
             .then(response => response.json())
             .then(json =>
                 this.setState({question:json}))

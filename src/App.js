@@ -45,7 +45,7 @@ class App extends Component {
         let newQuestion = {
             title: title,
             description: description,
-            author: author,
+            author: author
         };
 
         console.log(title + description + author );
