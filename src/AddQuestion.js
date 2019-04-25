@@ -74,7 +74,7 @@ export default class AddQuestion extends Component{
                     </form>
                 </div>
 
-                <button id="backbutton"><Link id="goback" to={`/`}>Go back to recipe</Link></button>
+                <button id="backbutton"><Link id="goback" to={`/`}>Go back to</Link></button>
             </div>
 
 

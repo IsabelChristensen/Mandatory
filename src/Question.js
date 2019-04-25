@@ -129,7 +129,7 @@ class Question extends Component {
 
 
                             <button onClick={this.handleSubmitComment}
-                                    type="submit" id="submitItemBtn" className="btn btn-primary">Add comment</button>
+                                    type="submit" id="submitItemBtn" className="btn btn-primary">Add</button>
 
                         </div>
                     </form>
@@ -139,7 +139,7 @@ class Question extends Component {
                             {list}
                         </ul>
                     <div className="updateQuestionbtn">
-                        <Link to={`/question/update/${question._id}`}>Update Recipe</Link></div>
+                        <Link to={`/question/update/${question._id}`}>Edit</Link></div>
 
                 </div>;
 
