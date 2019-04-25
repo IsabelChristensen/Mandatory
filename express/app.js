@@ -230,5 +230,5 @@ app.put('/api/question/update/minus/comment/:id/', (req, res) => {
 });
 
 
-app.listen(port, () => console.log(`Cooking API running on port ${port}!`));
+app.listen(port, () => console.log(`Shoppinglist API running on port ${port}!`));
 
